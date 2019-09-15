@@ -1,0 +1,10 @@
+<div class="login-container" style="height: 500px;">
+  <%= form_for MockExam.new do |f| %>
+    <div class="field">
+      <%= f.text_field :name, placeholder: "Name your exam..." %>
+    </div>
+
+    <%= f.submit "Start Exam", class: "btn", style: "height: 50px; width: 240px;" %>
+    <%= link_to "Cancel", "/", class: "btn cancel", style: "height: 50px; width: 240px; background-color: #d8d8d8;" %>
+  <% end %>
+</div>

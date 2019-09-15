@@ -1,0 +1,32 @@
+<%= link_to course do %>
+  <div class="course-block">
+    <% if course.topic == "Anthropology" %>
+      <%= image_tag 'Artboard 1 copy 2.png', class: "course-image #{course.topic}" %>
+    <% elsif course.topic == "Maths" %>
+      <%= image_tag 'Artboard 1 copy.png', class: "course-image #{course.topic}" %>
+
+    <% end %>
+    <%= content_tag :p, course.course_id, class: "course-title #{course.topic}" %>
+
+  </div>
+<% end %>
+
+<style>
+<% if course.topic == "Anthropology" %>
+.course-image.Anthropology {
+  background-color: #066f6e;
+}
+
+.course-title.Anthropology {
+  color: #066f6e;
+}
+<% else %>
+.course-image.Maths {
+  background-color: #bd1d1d;
+}
+
+.course-title.Maths {
+  color: #bd1d1d;
+}
+<% end %>
+</style>

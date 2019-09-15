@@ -1,0 +1,13 @@
+<div class="login-container">
+  <h2> Copy and Paste your notes in the box </h2>
+  <%= form_for Note.new do |f| %>
+    <%= f.hidden_field :course_id, value: @course.id %>
+    <div class="field note-block">
+      <%= f.text_area :body, autofocus: true, autocomplete: "note", class: "note-input" %>
+    </div>
+    <div class="note-actions">
+      <%= link_to "Cancel", "/choose_subject", class: "btn cancel", style: "background-color: #d8d8d8; width: 240px; height: 50px;" %>
+      <%= f.submit "Upload", class: "btn", style: "width: 240px; height: 50px;" %>
+    </div>
+  <% end %>
+</div>

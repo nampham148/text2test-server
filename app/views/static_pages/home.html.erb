@@ -1,0 +1,24 @@
+<p>
+  <%= current_user.name.nil? ? "Hello!" : "Hello, #{current_user.name}!" %>
+</p>
+
+<%= form_for CourseMembership.new do |f| %>
+  <div class="field">
+    <%= f.label :course_id %><br />
+    <%= f.text_field :course_id, autofocus: true, autocomplete: "course_id" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Join course", class: "btn", style: "height: 50px; width: 150px;" %>
+  </div>
+<% end %>
+
+<h2> Current courses </h2>
+<% current_user.courses.each do |course| %>
+  <%= render partial: "courses/course_block", locals: {course: course} %>
+<% end %>
+
+<%= link_to "Take an Exam!", new_mock_exam_path, class: "btn cancel", style: "display: block; height: 50px; width: 150px; margin-top: 20px;" %>
+
+<p>
+  <%= link_to "Logged out", destroy_user_session_path, method: :delete %> <br />
+</p>

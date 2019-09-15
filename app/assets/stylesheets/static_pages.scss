@@ -1,0 +1,107 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.login-container {
+  display: block;
+  width: 45rem;
+  height: 30rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); /* IE 9 */
+  -webkit-transform: translate(-50%, -50%); /* Chrome, Safari, Opera */
+}
+
+a {
+  text-decoration: none;
+}
+
+.login-form {
+  padding: 0 5rem;
+  margin-top: 3rem;
+}
+
+body {
+  background-color: #f4f5f9;
+  font-family: 'Karla', sans-serif;
+}
+
+.field {
+  label {
+    color: #aaaaaa;
+  }
+
+  input {
+    border: none;
+    width: 100%;
+    height: 80%;
+    font-size: 125%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  height: 3rem;
+  padding: 1rem 2rem;
+  background-color: white;
+  border-radius: 1.5rem;
+
+  -moz-box-shadow:    0px 3px 10px 2px #dbdada;
+  -webkit-box-shadow: 0px 3px 10px 2px #dbdada;
+  box-shadow:         0px 3px 10px 2px #dbdada;
+
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block; 
+  color: white;
+  background-color: #0291ff;
+  border: none;
+  border-radius: 1rem;
+}
+
+.login-btn {
+  float: right;
+}
+
+.forget-password {
+  color: black;
+  line-height: 3rem;
+}
+
+.title-link {
+  color: blue;
+}
+
+.note-input {
+  border: none;
+  resize: none;
+  height: 100%;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.note-block {
+  height: 300px;
+}
+
+.note-actions {
+  float: right;
+  height: 50px;
+}
+
+.btn {
+  font-size: 14px;
+}
+
+.cancel {
+  text-align: center;
+  line-height: 50px;
+  margin-right: 10px;
+}

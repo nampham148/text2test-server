@@ -1,0 +1,15 @@
+<%= @mock_exam.name %>
+
+<% counter = 1 %>
+
+<%= form_for :anything, url: url_for(controller: "mock_exams", action: "submit") do |f| %>
+
+  <% @mock_exam.exam_fill_in_questions.each do |question| %>
+    <%= content_tag :p, "#{counter}. #{question.question}" %>
+    <%= f.text_field question.id %>
+    <% counter = counter + 1 %>
+  <% end %>
+
+  <br />
+  <%= f.submit "Submit test", class: "btn", style: "height: 50px; width: 240px; margin-top: 20px;" %>
+<% end %>

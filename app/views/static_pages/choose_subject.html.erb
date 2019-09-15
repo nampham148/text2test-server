@@ -1,0 +1,8 @@
+<div class="login-container">
+  <h2> Choose your following courses </h2>
+  <div class="subject-block">
+    <% current_user.courses.each do |course| %>
+      <%= render partial: "courses/course_block", locals: {course: course} %>
+    <% end %>
+  </div>
+</div>

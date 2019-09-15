@@ -1,0 +1,21 @@
+<div class="login-container">
+  <h2> Welcome to <%= link_to "TextoTest", "/", class: "title-link" %> </h2>
+  <p> Simply add your notes and get prepared for your exam. </p>
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "login-form"}) do |f| %>
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "current-password" %>
+    </div>
+
+    <div class="control-login-box">
+      <%= link_to "Forgot Password?", new_user_password_path, class: "forget-password" %>
+      <%= f.submit "Log in", class: "btn login-btn", style: "width: 15rem; height: 3rem;" %>
+    </div>
+  <% end %>
+</div>

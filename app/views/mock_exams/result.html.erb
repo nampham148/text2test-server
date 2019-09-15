@@ -1,0 +1,11 @@
+<% counter = 1 %>
+
+<% @mock_exam.exam_fill_in_question_relationships.each do |result| %>
+  <% question = result.fill_in_question %>
+  <p> <%= counter %>. <%= question.question %>
+  <p> Answer: <%= result.answer %> </p>
+  <%= content_tag :p, "#{result.correct ? "Correct" : "Incorrect"}", style: "color: #{result.correct ? "green" : "red" }" %>
+  <% counter += 1 %>
+<% end %>
+
+<%= "Exam score: #{@mock_exam.score}/#{@mock_exam.num_questions}" %>
