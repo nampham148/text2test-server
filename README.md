@@ -1,24 +1,25 @@
-# README
+# Text2Test
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Web Application to help students prepare for exams by generating mock exam questions from lecture notes. Project was developed at HackMIT 2019.
 
-Things you may want to cover:
+## Get it running
 
-* Ruby version
+To run the project from your local machine, you will need Ruby on Rails.
 
-* System dependencies
+Install dependencies with
 
-* Configuration
+```
+bundle install
+```
 
-* Database creation
+To start the server
 
-* Database initialization
+```
+rails serve
+```
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Built With
 
-* Deployment instructions
-
-* ...
+* [Ruby on Rails](https://github.com/rails/rails) - The web framework used
+* [AWS Comprehend](https://aws.amazon.com/comprehend/) - NLP service we used to analyze lecture notes.
