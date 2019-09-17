@@ -15,7 +15,7 @@ bundle install
 To start the server
 
 ```
-rails serve
+rails server
 ```
 
 
